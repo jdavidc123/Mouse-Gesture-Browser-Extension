@@ -1,1 +1,0 @@
-# Mouse-Gesture-Browser-Extension
