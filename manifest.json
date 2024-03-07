@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Mouse Gesture",
+  "description": "Basic Mouse Gestures",
+  "version": "1.0",
+  "icons": {
+    "16": "images/mg.png",
+    "32": "images/mg.png",
+    "48": "images/mg.png",
+    "128": "images/mg.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "images/mg.png"
+  },
+  "permissions": ["activeTab","tabs"],
+  "background": {
+    "service_worker": "scripts/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/gesture.js"],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ]
+}
