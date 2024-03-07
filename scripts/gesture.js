@@ -1,7 +1,4 @@
 (() => {
-    console.log(window);
-    console.log(document);
-
     let initialX, initialY;
 
     window.addEventListener('dragstart', (e) => {
