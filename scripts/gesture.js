@@ -19,21 +19,21 @@
         let deltaY = finalY - initialY;
 
         // Determine the direction of the drag based on the difference in coordinates
-        let direction;
+
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
-            direction = deltaX > 0 ?
+            deltaX > 0 ?
                 // SEARCHES GOOGLE IMAGES IF DRAGGED RIGHT,
                 window.open(`https://google.com/search?q=${highlightedText}&tbm=isch`) :
                 // SEARCHES GOOGLE VIDEOS IF DRAGGED LEFT,
                 window.open(`https://google.com/search?q=${highlightedText}&tbm=vid`);
         } else {
-            direction = deltaY > 0 ?
+            deltaY > 0 ?
                 // SEARCHES GOOGLE(REGULAR SEARCH) IF DRAGGED DOWN
                 window.open(`https://google.com/search?q=${highlightedText}`) :
                 //SEARCHES GOOGLE TRANSLATE IF DRAGGED UP
                 window.open(`https://translate.google.com/?sl=auto&tl=en&text=${highlightedText}&op=translate`);
         }
 
-        console.log(direction)
+
     })
 })();
